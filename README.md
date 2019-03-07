@@ -128,10 +128,10 @@ scores <- data %>%
 
 The IKDC can only be scored if participants repond to 16 items or more. We'll record a count of the number of non-missing responses to be used later.
 
-``` r
-count_exist <- function(x) {sum(!is.na(x))-1}
+As the ID field is in the first column, we'll skip it when counting non-missing values.
 
-scores  <- scores %>% mutate(response_count = apply(., 1, count_exist))
+``` r
+scores$response_count <- rowSums(!is.na(scores[2:length(scores)])
 ```
 
 The IKDC score is calculated by: \[sum of the item level scores\] / \[sum of the maximum scores possible on the items to which the participants responded\] \* 100.
