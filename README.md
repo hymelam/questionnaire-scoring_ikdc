@@ -131,7 +131,7 @@ The IKDC can only be scored if participants repond to 16 items or more. We'll re
 As the ID field is in the first column, we'll skip it when counting non-missing values.
 
 ``` r
-scores$response_count <- rowSums(!is.na(scores[2:length(scores)])
+scores$response_count <- rowSums(!is.na(scores[2:length(scores)]))
 ```
 
 The IKDC score is calculated by: \[sum of the item level scores\] / \[sum of the maximum scores possible on the items to which the participants responded\] \* 100.
