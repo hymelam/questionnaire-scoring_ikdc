@@ -129,7 +129,7 @@ scores <- data %>%
 The IKDC can only be scored if participants repond to 16 items or more. We'll record a count of the number of non-missing responses to be used later.
 
 ``` r
-count_exist <- function(x) sum(!is.na(x))
+count_exist <- function(x) {sum(!is.na(x))-1}
 
 scores  <- scores %>% mutate(response_count = apply(., 1, count_exist))
 ```
