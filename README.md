@@ -248,19 +248,6 @@ IKDC scores range from 0 to 100. Let's look at a summary:
 library(dplyr)
 ```
 
-    ## Warning: package 'dplyr' was built under R version 3.4.4
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
 ``` r
 data %>% summarize(
   min = min(ikdc_score, na.rm=TRUE),
@@ -278,8 +265,6 @@ We can also easily see the score's distribution.
 ``` r
 library(ggplot2)
 ```
-
-    ## Warning: package 'ggplot2' was built under R version 3.4.4
 
 ``` r
 theme_set(theme_light())
