@@ -209,7 +209,7 @@ scores$response_count <- rowSums( !is.na( scores[ colnames(scores) %in% var$varl
 
 The IKDC score is calculated by: \[sum of the item level scores\] / \[sum of the maximum scores possible on the items to which the participant responded\] \* 100.
 
-IKDC items have maximum scores of either 1, 4, or 10. In preparation of calculating the denominator value, we'll create a version of each IKDC item that contains either: NA (if the participant did not respond) or the maximum possible value (if the participant did respond). These variables will have the same names as the item-level score variables, but with a "\_denom" suffix.
+IKDC items have maximum scores of either 1, 4, or 10. To prepare to calculate the denominator value, we'll create a version of each IKDC item that contains either: NA (if the participant did not respond) or the maximum possible value (if the participant did respond). These variables will have the same names as the item-level score variables, but with a "\_denom" suffix.
 
 ``` r
 # Add a denominator suffix ("_denom") to all questionnaire item names
